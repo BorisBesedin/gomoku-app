@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: BurlyWood;
+}
+
+.cell {
+    position: relative;
+    border: 2px solid Sienna;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 35px;
+    line-height: 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+}
+
+.x {
+    background-image: url('../img/x.png');    
+}
+
+.o {
+    background-image: url('../img/o.png');
+}
+
+.win {
+   background-color: Peru;
+}
+
+
+table {
+    border-collapse: collapse;
+    background-color: Moccasin;
+}
+
+.game-status {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.game-status p {
+    font-size: 20px;
+}
+
+.current-player {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.game-over {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.container {
+    width: 400px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: BurlyWood;
+    box-shadow: 0 2px 5px 0 #000;
+}
+
+.game-over p {
+    font-size: 40px;
+}
+
+.replay-btn {
+    margin-left: 50px;    
+}
+
+.button {
+    padding: 10px 20px;
+    border: 1px solid Sienna;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: Moccasin;
+    transition: 0.3s ease-in;
+}
+
+.button:hover {
+    background-color: Peru;
+    color: white;
+}
+
+.player-win {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 550px) {
+    body {
+        justify-content: start;
+    }
+    .cell {
+        width: 20px;
+        height: 20px;
+    }
+
+    .game-status {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .replay-btn {
+        margin-left: 0;
+    }
+}
